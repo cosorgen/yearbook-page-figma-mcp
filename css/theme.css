@@ -1,0 +1,230 @@
+/* Theme CSS - Custom properties and color schemes */
+
+:root {
+  /* Colors - Light theme (default) */
+  --color-bg-primary: #e9e6e1;
+  --color-bg-secondary: rgba(255, 255, 255, 0.5);
+  --color-bg-tertiary: #ffffff;
+  --color-text-primary: #282828;
+  --color-text-secondary: #3e3e59;
+  --color-text-muted: #5f6980;
+  --color-text-heading: #282828;
+  --color-accent: #2169eb;
+  --color-accent-hover: #1557d3;
+  --color-border: #d0d7de;
+  --color-border-subtle: rgba(0, 0, 0, 0.1);
+
+  /* Spacing scale (rem based) */
+  --space-xs: 0.25rem;
+  /* 4px */
+  --space-sm: 0.5rem;
+  /* 8px */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 1.5rem;
+  /* 24px */
+  --space-xl: 2rem;
+  /* 32px */
+  --space-2xl: 2.5rem;
+  /* 40px */
+  --space-3xl: 4rem;
+  /* 64px */
+  --space-4xl: 5rem;
+  /* 80px */
+  --space-5xl: 6.5rem;
+  /* 104px */
+
+  /* Font weights */
+  --font-weight-regular: 410;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Font sizes (rem based) */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.25rem;
+  /* 20px */
+  --font-size-2xl: 1.5rem;
+  /* 24px */
+  --font-size-3xl: 1.875rem;
+  /* 30px */
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.875;
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  /* 8px */
+  --radius-md: 0.75rem;
+  /* 12px */
+  --radius-lg: 1rem;
+  /* 16px */
+  --radius-xl: 2rem;
+  /* 32px */
+  --radius-2xl: 2.25rem;
+  /* 36px */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+
+  /* Z-index scale */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-modal: 100;
+  --z-skip: 1000;
+
+  /* Focus styles */
+  --focus-ring: 2px solid var(--color-accent);
+  --focus-offset: 2px;
+
+  /* Grid and layout */
+  --container-max: 1200px;
+  --profile-width: 400px;
+  --project-grid-cols: 2;
+  --gap-grid: var(--space-lg);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #0f1115;
+    --color-bg-secondary: rgba(255, 255, 255, 0.1);
+    --color-bg-tertiary: #1c1f26;
+    --color-text-primary: #f5f7fa;
+    --color-text-secondary: #e1e4e8;
+    --color-text-muted: #8b949e;
+    --color-text-heading: #f5f7fa;
+    --color-accent: #4ea3ff;
+    --color-accent-hover: #3692e7;
+    --color-border: #2e3440;
+    --color-border-subtle: rgba(255, 255, 255, 0.1);
+
+    /* Adjust shadows for dark theme */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Manual theme overrides */
+[data-theme="light"] {
+  --color-bg-primary: #e9e6e1;
+  --color-bg-secondary: rgba(255, 255, 255, 0.5);
+  --color-bg-tertiary: #ffffff;
+  --color-text-primary: #282828;
+  --color-text-secondary: #3e3e59;
+  --color-text-muted: #5f6980;
+  --color-text-heading: #282828;
+  --color-accent: #2169eb;
+  --color-accent-hover: #1557d3;
+  --color-border: #d0d7de;
+  --color-border-subtle: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: #0f1115;
+  --color-bg-secondary: rgba(255, 255, 255, 0.1);
+  --color-bg-tertiary: #1c1f26;
+  --color-text-primary: #f5f7fa;
+  --color-text-secondary: #e1e4e8;
+  --color-text-muted: #8b949e;
+  --color-text-heading: #f5f7fa;
+  --color-accent: #4ea3ff;
+  --color-accent-hover: #3692e7;
+  --color-border: #2e3440;
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+}
+
+/* High contrast theme */
+[data-theme="high-contrast"],
+.contrast-high {
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #000000;
+  --color-bg-tertiary: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-text-heading: #ffffff;
+  --color-accent: #ffde00;
+  --color-accent-hover: #ffd700;
+  --color-border: #ffffff;
+  --color-border-subtle: #ffffff;
+
+  /* Enhanced focus for high contrast */
+  --focus-ring: 3px solid var(--color-accent);
+  --focus-offset: 2px;
+
+  /* Remove shadows in high contrast */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+}
+
+/* High contrast media query support */
+@media (prefers-contrast: more) {
+  :root {
+    --color-bg-primary: #000000;
+    --color-bg-secondary: #000000;
+    --color-bg-tertiary: #000000;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #ffffff;
+    --color-text-muted: #ffffff;
+    --color-text-heading: #ffffff;
+    --color-accent: #ffde00;
+    --color-accent-hover: #ffd700;
+    --color-border: #ffffff;
+    --color-border-subtle: #ffffff;
+
+    --focus-ring: 3px solid var(--color-accent);
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+  }
+}
+
+/* Responsive breakpoints as custom properties */
+@media (min-width: 480px) {
+  :root {
+    --space-container: var(--space-lg);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-container: var(--space-xl);
+    --project-grid-cols: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-container: var(--space-3xl);
+    --gap-grid: var(--space-2xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --space-container: var(--space-4xl);
+    --gap-grid: var(--space-5xl);
+  }
+}

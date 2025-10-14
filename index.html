@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Cody Sorgenfrey's yearbook page - Professor at Edge / Design system. Showcasing projects and memories.">
+  <title>Cody Sorgenfrey - Yearbook Page</title>
+
+  <!-- Theme color for browser chrome -->
+  <meta name="theme-color" content="#e9e6e1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+
+  <!-- Preconnect to improve performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- CSS Files - Critical CSS will be inlined, rest loaded via link -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="sr-only">
+    <h1>Cody Sorgenfrey's Yearbook Page</h1>
+    <nav aria-label="Theme controls">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Theme</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="yearbook-page">
+    <!-- Profile Section -->
+    <section class="profile-section" aria-labelledby="profile-heading">
+      <article class="profile-card">
+        <div class="profile-card__image">
+          <img src="images/profile-cody.jpg" alt="Portrait of Cody Sorgenfrey smiling, wearing a blue sweater"
+            width="400" height="528" loading="eager" fetchpriority="high">
+        </div>
+
+        <div class="profile-card__content">
+          <header class="profile-card__header">
+            <h2 id="profile-heading" class="profile-card__name">Cody Sorgenfrey</h2>
+            <div class="profile-card__title">
+              <span>Professor</span>
+              <span aria-hidden="true">|</span>
+              <span>Edge / Design system</span>
+            </div>
+          </header>
+
+          <blockquote class="profile-card__quote">
+            "Code is like humor. When you have to explain it, it's bad."
+          </blockquote>
+
+          <nav class="profile-card__socials" aria-label="Cody's social links">
+            <a href="https://linkedin.com/in/codysorgenfrey" class="social-link" aria-label="LinkedIn profile"
+              rel="noopener noreferrer" target="_blank">
+              <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://codysorgenfrey.com" class="social-link" aria-label="Personal website"
+              rel="noopener noreferrer" target="_blank">
+              <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm5.568 13.8h-3.92c.1-.8.154-1.584.154-2.4s-.055-1.6-.154-2.4h3.92c.328.749.513 1.557.513 2.4s-.185 1.651-.513 2.4zm-1.405 1.2c-.281 1.076-.703 2.076-1.226 2.972-.435-.334-.901-.725-1.366-1.204-.3-.31-.582-.641-.849-.992h3.441v-.776zm0-7.6h-3.441c.267-.351.549-.682.849-.992.465-.479.931-.87 1.366-1.204.523.896.945 1.896 1.226 2.972V7.4zm-5.568 0H6.837c.281-1.076.703-2.076 1.226-2.972.435.334.901.725 1.366 1.204.3.31.582.641.849.992zm0 1.2c-.1.8-.154 1.584-.154 2.4s.055 1.6.154 2.4H6.837c-.328-.749-.513-1.557-.513-2.4s.185-1.651.513-2.4h3.758zm0 6h3.441c-.267.351-.549.682-.849.992-.465.479-.931.87-1.366 1.204-.523-.896-.945-1.896-1.226-2.972V15zm1.405-1.2c.281-1.076.703-2.076 1.226-2.972.435.334.901.725 1.366 1.204.3.31.582.641.849.992H13v.776z" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </article>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="sr-only">Featured Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <a href="https://glizzykitty.com" class="project-card__link" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit Glizzy Kitty website">
+            <div class="project-card__image">
+              <img src="images/project-glizzy-kitty.jpg" alt="A cute tabby cat sitting with hot dogs, space background"
+                width="567" height="319" loading="lazy">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Glizzy Kitty</h3>
+              <p class="project-card__author">Cody Sorgenfrey</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <button class="project-card__button" type="button" data-video="parties-edge"
+            aria-label="Play Parties in Edge video">
+            <div class="project-card__image">
+              <img src="images/project-parties-edge.jpg" alt="A cat wearing headphones at a DJ setup with turntables"
+                width="567" height="319" loading="lazy">
+              <div class="project-card__play-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Parties in Edge</h3>
+              <p class="project-card__author">Cody Sorgenfrey</p>
+            </div>
+          </button>
+        </article>
+
+        <article class="project-card">
+          <a href="https://vibehub.microsoft.com/app/sc8vq3qznd" class="project-card__link" target="_blank"
+            rel="noopener noreferrer" aria-label="Visit Holy hotdog cat celebration on VibeHub">
+            <div class="project-card__image">
+              <img src="images/project-hotdog-cat.jpg"
+                alt="Abstract space scene with colorful planets and a small character" width="567" height="319"
+                loading="lazy">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Holy hotdog cat celebration</h3>
+              <p class="project-card__author">Cody Sorgenfrey</p>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="cta-section">
+        <button id="sign-button" class="sign-button" type="button">
+          <svg class="sign-button__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+          </svg>
+          Sign Cody's page
+        </button>
+      </div>
+    </section>
+
+    <!-- Signatures Section -->
+    <section class="signatures-section" aria-labelledby="signatures-heading">
+      <h2 id="signatures-heading" class="sr-only">Yearbook Signatures</h2>
+
+      <!-- Signatures Display -->
+      <div class="signatures-container">
+        <!-- Signatures will be loaded dynamically -->
+        <div class="signatures-loading">
+          <p>Loading signatures...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title"
+    aria-hidden="true">
+    <div class="video-modal__backdrop"></div>
+    <div class="video-modal__container">
+      <div class="video-modal__header">
+        <h2 id="video-modal-title" class="video-modal__title">Parties in Edge</h2>
+        <button class="video-modal__close" type="button" aria-label="Close video">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="video-modal__content">
+        <video id="parties-edge-video" class="video-modal__video" controls preload="none"
+          aria-describedby="video-description">
+          <source src="videos/parties-in-edge.mp4" type="video/mp4">
+          <p>Your browser doesn't support HTML5 video. <a href="videos/parties-in-edge.mp4">Download the video</a>
+            instead.</p>
+        </video>
+        <p id="video-description" class="sr-only">A video showcasing the Parties in Edge project by Cody Sorgenfrey</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signature Modal -->
+  <div id="signature-modal" class="signature-modal" role="dialog" aria-modal="true"
+    aria-labelledby="signature-modal-title" aria-hidden="true">
+    <div class="signature-modal__backdrop"></div>
+    <div class="signature-modal__container">
+      <div class="signature-modal__header">
+        <h2 id="signature-modal-title" class="signature-modal__title">Sign My Yearbook!</h2>
+        <button class="signature-modal__close" type="button" aria-label="Close signature form">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="signature-modal__content">
+        <form id="signature-form" class="signature-form" novalidate>
+          <div class="signature-form__field">
+            <label for="display_name" class="signature-form__label">Your Name</label>
+            <input type="text" id="display_name" name="display_name" class="signature-form__input" maxlength="50"
+              required placeholder="Enter your name">
+          </div>
+
+          <div class="signature-form__field">
+            <label for="message" class="signature-form__label">Your Message</label>
+            <textarea id="message" name="message" class="signature-form__textarea" maxlength="280" rows="3" required
+              placeholder="Write a nice message..."></textarea>
+            <div class="signature-form__counter">
+              <span id="char-counter">0</span>/280
+            </div>
+          </div>
+
+          <button type="submit" class="signature-form__submit">Sign Yearbook</button>
+        </form>
+
+        <div id="signature-error" class="signature-message signature-message--error" style="display: none;"></div>
+        <div id="signature-success" class="signature-message signature-message--success" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase JavaScript Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0/dist/umd/supabase.min.js"></script>
+
+  <!-- Progressive Enhancement JavaScript -->
+  <script type="module" src="js/theme-toggle.js"></script>
+  <script type="module" src="js/smooth-scroll.js"></script>
+  <script type="module" src="js/video-modal.js"></script>
+  <script type="module" src="js/signatures.js"></script>
+</body>
+
+</html>
